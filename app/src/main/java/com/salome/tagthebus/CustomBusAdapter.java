@@ -27,7 +27,7 @@ public class CustomBusAdapter extends ArrayAdapter<BusStop>{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        BusStop busStop = getItem(position);
+        final BusStop busStop = getItem(position);
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.bus_stop_item_layout,
                     parent, false);
@@ -35,16 +35,17 @@ public class CustomBusAdapter extends ArrayAdapter<BusStop>{
         TextView titles = (TextView) convertView.findViewById(R.id.BusStopStreetName);
         titles.setText(busStop.streetName);
 
-        /*titles.setOnClickListener(new View.OnClickListener() {
+        titles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, EditingActivity_.class);
+                Intent intent = new Intent(context, ABusStopActivity_.class);
                 Bundle bundle = new Bundle();
-                bundle.putInt("Id", passedTask.id);
+                bundle.putInt("BusStopID", busStop.id);
+                bundle.putString("BusStopName", busStop.streetName);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }
-        });*/
+        });
 
         return convertView;
     }
