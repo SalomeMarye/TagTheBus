@@ -31,6 +31,9 @@ dependencies {
 
 def AAVersion = '4.4.0'
 dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
+}
+dependencies {
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
 }
