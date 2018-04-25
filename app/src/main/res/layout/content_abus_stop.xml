@@ -5,23 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.salome.tagthebus.MainActivity"
-    tools:showIn="@layout/activity_main">
-
-    <RelativeLayout
-        android:id="@+id/loadingPanel"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center" >
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:indeterminate="true" />
-    </RelativeLayout>
+    tools:context="com.salome.tagthebus.ABusStopActivity"
+    tools:showIn="@layout/activity_abus_stop">
 
     <ListView
-        android:id="@+id/busStopListView"
+        android:id="@+id/pictureListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
