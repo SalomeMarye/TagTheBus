@@ -15,12 +15,17 @@ public class MySqlLiteBase extends SQLiteOpenHelper
     private static final String COL_BUS_STOP_ID = "BusStopId";
     private static final String COL_TITLE = "Title";
     private static final String COL_CREATION_DATE = "CreationDate";
-    //private static final String COL_PATH_TO_PICTURE = "PathToPicture";
+    private static final String COL_PATH_TO_PICTURE = "PicturePath";
+    private static final String COL_FRONT_CAMERA = "FrontCamera";
 
-    private static final String CREATE_BDD = "CREATE TABLE " + PICTURE_TABLE + " ("
-            + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COL_BUS_STOP_ID + " INTEGER NOT NULL, "
+    private static final String CREATE_BDD = "CREATE TABLE "
+            + PICTURE_TABLE + " ("
+            + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + COL_BUS_STOP_ID + " INTEGER NOT NULL, "
             + COL_TITLE + " TEXT NOT NULL, "
-            + COL_CREATION_DATE + " TEXT NOT NULL);";
+            + COL_CREATION_DATE + " TEXT NOT NULL,"
+            + COL_PATH_TO_PICTURE + " TEXT NOT NULL,"
+            + COL_FRONT_CAMERA + " INTEGER NOT NULL);";
 
     public MySqlLiteBase(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
     {
